@@ -6,30 +6,6 @@ output:
     latex_engine: xelatex
   html_document: default
 ---
-**Introduction**
-
-This report evaluates the performance of a pairing algorithm used by the dating app Oz. The algorithm calculates compatibility between users based on their preferences and similarities, assigning scores referred to as Liking Scores and Match Scores. The goal of this analysis is to determine whether the algorithm is accurately identifying the best matches or if its recommendations are flawed. The evaluation focuses on six individuals: three men—Fiyero, Kristoff, and Bruno and three women—Anna, Elphaba, and Rosie. The findings are compared to the algorithm’s suggested matches, which pair Anna with Fiyero, Elphaba with Kristoff, and Rosie with Bruno, to check for accuracy.
-
-**Methodology**
-
-***Correlation Matrices:*** Correlation matrices revealed varied similarities and differences in preferences among users, allowing identification of meaningful comparison users. Men’s correlation values were derived from Liked_M_F, while women’s values were derived from Liked_F_M.
-
-***Liking Scores:*** The Liking Scores were calculated based on the specified logic and included contributions from both positively and negatively correlated comparison users.
-
-***Match Scores:*** Match Scores were calculated for all nine possible pairs among the first three men and women. The results are summarized in Table 1.
-
-**Results**
-The compatibility matrix displays the calculated Match Scores for all relevant pairings.
-
-Based on the calculated Match Scores, the recommended pairings are:
-
-Anna: Kristoff (1.039) Elphaba: Fiyero (0.984) Rosie: Bruno (0.887)
-
-**Interpretation**
-
-The findings suggest a discrepancy between the Oz algorithm’s recommendations and the calculated optimal matches. The highest Match Scores indicate that Anna should be paired with Kristoff, while Elphaba is best matched with Fiyero, and Rosie with Bruno.These pairs differ from the algorithm’s initial suggestions, which recommended Anna with Fiyero, Elphaba with Kristoff, and Rosie with Bruno.
-
-This difference in results strongly indicates that the current algorithm is bugged as it fails to prioritize the highest Match Scores based on mutual compatibility. The discrepancies suggest the need for a review and potential recalibration of the Oz algorithm to ensure its outputs align with true compatibility metrics.
 
 ```{r}
 
